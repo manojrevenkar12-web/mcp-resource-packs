@@ -70,3 +70,57 @@ def test_a_sheet_named_as_an_archive_is_left_out(world, cfg):
     for s in c.sheets:
         if s["name"].startswith("ARCHIVE"):
             assert d["sheets"][str(s["id"])]["kind"] == "archive"
+
+
+def test_a_done_box_is_found_when_progress_is_typed_as_text(cfg):
+    """Held-out finding: progress typed as "70 %" hid the done box from the value check, and nothing asked about it."""
+    from datetime import date
+
+    def row(i, pct, ticked):
+        return {
+            "id": i,
+            "parentId": None,
+            "cells": [
+                {"columnId": 10, "value": f"t{i}"},
+                {"columnId": 11, "value": "2026-10-01"},
+                {"columnId": 12, "value": f"2026-10-{10 + i % 15:02d}"},
+                {"columnId": 13, "value": f"{pct} %"},
+                {"columnId": 14, "value": ticked},
+                {"columnId": 15, "value": False},
+            ],
+        }
+
+    ws = {
+        "customer": "X",
+        "sheets": [
+            {
+                "id": 1,
+                "name": "Plan",
+                "columns": [
+                    {"id": 10, "title": "Livrable", "type": "TEXT_NUMBER", "primary": True},
+                    {"id": 11, "title": "Start", "type": "DATE"},
+                    {"id": 12, "title": "Due", "type": "DATE"},
+                    {"id": 13, "title": "Progress", "type": "TEXT_NUMBER"},
+                    {"id": 14, "title": "Terminé", "type": "CHECKBOX"},
+                    {"id": 15, "title": "Drapeau", "type": "CHECKBOX"},
+                ],
+                "rows": [row(i, 100 if i % 3 == 0 else 40, i % 3 == 0) for i in range(30)],
+            }
+        ],
+    }
+    d = infer.draft(ws, cfg, date(2026, 11, 16))
+    t = next(iter(d["templates"].values()))
+    assert t["roles"].get("done") == "Terminé"
+    asked = {i["key"]: i["value"] for i in review.queue(d, cfg["review_threshold"]) if i["kind"] == "role"}
+    assert asked.get("Drapeau", "missing") is None  # a tick box with no role found becomes a question
+
+
+def test_a_finished_project_named_only_by_year_goes_to_the_admin(world, cfg):
+    """Held-out finding: "Fleet Refit 2024" was read as a live project with 0.9 confidence."""
+    c = next(c for c in world.customers if c.archive_style == "year")
+    d = infer.draft(world.workspace(c.id), cfg, world.today)
+    archived = [s for s in c.sheets if c.kinds[s["id"]] == "archive"]
+    assert archived
+    for s in archived:
+        it = next(i for i in d["items"] if i["kind"] == "sheet_kind" and i["key"] == str(s["id"]))
+        assert it["value"] == "archive" or it["confidence"] < cfg["review_threshold"]

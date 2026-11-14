@@ -84,7 +84,7 @@ text, archives named only by a year. Run once with the code and settings the dev
 
 {design_table(h)}
 
-{h["kits"]["ready"]} of {h["kits"]["total"]} kits passed their lint; the status-line patterns chosen per customer wrote
+{h["kits"]["ready"]} of {h["kits"]["total"]} kits passed their lint. Before the change that holds writes back until a kit passes, the chosen patterns wrote
 {h["patterns"]["totals"]["chosen"]["wrong"]} wrong lines out of {h["patterns"]["totals"]["chosen"]["lines"]}. What went wrong and what changed afterwards:
 [docs/heldout.md](docs/heldout.md)."""
 
@@ -175,7 +175,8 @@ Why answers went wrong:
 One agent alone writes wrong lines (a miscount, a wrong colour). A pilot of {PACKS["patterns"]["pilot_weeks"]} weeks cannot show that rate is within
 a customer's tolerance at 95% confidence, so no customer got the single agent: the checker costs
 {pt["maker_checker"]["llm_calls"] - pt["single"]["llm_calls"]} extra LLM calls in {pt["single"]["lines"]} lines and removes the wrong ones. Regulated customers
-({r["volume"]["regulated"]}) get approval on every line for the audit trail, not for accuracy.
+({r["volume"]["regulated"]}) get approval on every line for the audit trail, not for accuracy. Agents write only for
+customers whose kit passes its lint: the checker is only as right as the pack it checks with.
 
 ## Field findings for the platform
 

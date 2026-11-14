@@ -288,6 +288,9 @@ def evaluate(world_name: str) -> dict:
             "questions_for_admin": asked,
         }
         crow["kit_ready"] = not problems
+        # Agents write only for customers whose kit is done: the checker is only as right as the pack it checks with
+        # (held-out finding, docs/heldout.md).
+        pattern_rows[-1]["switched_on"] = not problems
         crow["translations"] = translations(full, ws)
         customers.append(crow)
 
@@ -309,11 +312,15 @@ def evaluate(world_name: str) -> dict:
         }
     pat = {p: Counter() for p in cfg["patterns"]["order"] + ["chosen"]}
     for row in pattern_rows:
-        for p, o in list(row["outcomes"].items()) + [("chosen", row["outcomes"][row["chosen"]])]:
+        chosen_rows = [("chosen", row["outcomes"][row["chosen"]])] if row["switched_on"] else []
+        pat["chosen"]["held_back"] += int(not row["switched_on"])
+        for p, o in list(row["outcomes"].items()) + chosen_rows:
             for k in ("lines", "wrong", "llm_calls", "person_minutes"):
                 pat[p][k] += o[k]
         pat["chosen"]["over_tolerance"] += int(
-            row["outcomes"][row["chosen"]]["wrong_rate"] > row["tolerance"] and not row["regulated"]
+            row["switched_on"]
+            and row["outcomes"][row["chosen"]]["wrong_rate"] > row["tolerance"]
+            and not row["regulated"]
         )
     proposals = [
         {"kind": k, "key": key, "answer": ans, "customers": sorted(cs)}

@@ -14,7 +14,7 @@ import re
 from datetime import date
 
 from . import lexicon
-from .engine import parse_date
+from .engine import parse_date, parse_progress
 
 DMY = re.compile(r"^\d{1,2}\.\d{1,2}\.\d{4}$")
 
@@ -95,6 +95,12 @@ class Drafter:
             latest += [d for d in (parse_date(v, fmt) for v in _values([s], c["title"])) if d]
         if latest and max(latest) < self.today.replace(year=self.today.year - 1):
             return "archive", 0.6, f"nothing dated after {max(latest).isoformat()}: probably finished"
+        # Every row complete: a finished project kept in the workspace, whatever its name says (held-out finding).
+        for c in numeric:
+            fmt = _progress_format(_values([s], c["title"]))
+            vals = [parse_progress(v, fmt) for v in _values([s], c["title"])]
+            if fmt and len(vals) >= 0.9 * len(s["rows"]) and all(v >= 0.999 for v in vals):
+                return "archive", 0.6, f'every row is 100% complete in "{c["title"]}": probably finished'
         return "project", 0.9, f"{len(s['rows'])} rows with start and end dates"
 
     # ------------------------------------------------------------------------------------------ one template
@@ -166,6 +172,19 @@ class Drafter:
         for role, title in roles.items():
             c, why = conf[role]
             self.item("role", title, role, c, why, rep)
+        # A tick box, picklist, contact or date column with no role is asked about, not ignored: a column nobody
+        # asked about cannot be fixed by review (held-out finding, docs/heldout.md).
+        assigned = set(roles.values())
+        for c in cols:
+            if c["title"] not in assigned and c["type"] in ("CHECKBOX", "PICKLIST", "CONTACT_LIST", "DATE"):
+                self.item(
+                    "role",
+                    c["title"],
+                    None,
+                    0.4,
+                    f"a {c['type'].lower().replace('_', ' ')} column with no role found",
+                    rep,
+                )
         out = {"roles": roles, "status_values": {}, "progress": "fraction", "dates": date_fmt}
         if "progress" in roles:
             out["progress"] = _progress_format(_values(sheets, roles["progress"])) or "fraction"
@@ -208,6 +227,7 @@ class Drafter:
         if "start" not in roles or "due" not in roles:
             return None, 0, ""
         zero = high = ticked = 0
+        pfmt = _progress_format(_values(sheets, roles["progress"])) if "progress" in roles else None
         for s in sheets:
             ids = {c["title"]: c["id"] for c in s["columns"]}
             for r in s["rows"]:
@@ -218,9 +238,9 @@ class Drafter:
                 st = parse_date(v.get(ids[roles["start"]]), fmts[roles["start"]])
                 du = parse_date(v.get(ids[roles["due"]]), fmts[roles["due"]])
                 zero += int(st is not None and st == du)
-                if "progress" in roles:
-                    p = v.get(ids[roles["progress"]])
-                    high += int(isinstance(p, (int, float)) and p >= 0.7 * (100 if p > 1 else 1))
+                if pfmt:
+                    # read progress in the column's own format: 0.7, 70 and "70 %" are the same (held-out finding)
+                    high += int(parse_progress(v.get(ids[roles["progress"]]), pfmt) >= 0.7)
         if not ticked:
             return None, 0, ""
         if zero / ticked > 0.9:

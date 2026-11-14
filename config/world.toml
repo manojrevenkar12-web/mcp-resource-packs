@@ -17,9 +17,9 @@ glossary_share = 0.5           # share of questions written in the customer's ow
 # conventions that exist in this world (the held-out world adds others)
 languages = ["en", "de"]
 status_vocabs = ["ryg", "track", "gar", "de_colours", "ok_watch", "custom_plan"]
-progress_formats = ["fraction", "percent"]
+progress_formats = ["fraction", "percent", "percent_text"]   # percent_text added after the held-out run
 date_formats = ["iso"]
-archive_styles = ["prefix", "suffix_old", "closed"]
+archive_styles = ["prefix", "suffix_old", "closed", "year"]   # "year" added after the held-out run
 
 # The LLM that reads raw sheets through a generic MCP connection.
 [llm]

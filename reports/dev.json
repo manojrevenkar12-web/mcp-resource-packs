@@ -14,21 +14,21 @@
      "lower": 0.1578,
      "questions": 60,
      "right": 15,
-     "tokens_per_question": 47572
+     "tokens_per_question": 48508
     },
     "kit": {
      "accepted": true,
      "lower": 0.8864,
      "questions": 60,
      "right": 58,
-     "tokens_per_question": 687
+     "tokens_per_question": 686
     },
     "pack_as_context": {
      "accepted": false,
      "lower": 0.6099,
      "questions": 60,
      "right": 44,
-     "tokens_per_question": 45081
+     "tokens_per_question": 45080
     },
     "reviewed_pack": {
      "accepted": false,
@@ -45,8 +45,8 @@
    "name": "Northwind Software",
    "pattern": "maker_checker",
    "regulated": false,
-   "review_items": 4,
-   "rows": 1366,
+   "review_items": 5,
+   "rows": 1392,
    "sheets": 24,
    "templates": 2,
    "translations": [
@@ -54,6 +54,12 @@
      "kind": "column",
      "means": "completion",
      "seen": "Completion",
+     "source": "admin"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "Store Setup 2024",
      "source": "admin"
     },
     {
@@ -139,12 +145,6 @@
      "means": "start date",
      "seen": "Start Date",
      "source": "inferred"
-    },
-    {
-     "kind": "sheet",
-     "means": "not a plan, left out",
-     "seen": "Project Intake",
-     "source": "inferred"
     }
    ]
   },
@@ -155,7 +155,7 @@
      "lower": 0.7583,
      "questions": 60,
      "right": 52,
-     "tokens_per_question": 616
+     "tokens_per_question": 617
     },
     "generic_mcp": {
      "accepted": false,
@@ -169,21 +169,21 @@
      "lower": 0.9398,
      "questions": 60,
      "right": 60,
-     "tokens_per_question": 644
+     "tokens_per_question": 645
     },
     "pack_as_context": {
      "accepted": false,
      "lower": 0.6099,
      "questions": 60,
      "right": 44,
-     "tokens_per_question": 49460
+     "tokens_per_question": 49461
     },
     "reviewed_pack": {
      "accepted": false,
      "lower": 0.7782,
      "questions": 60,
      "right": 53,
-     "tokens_per_question": 616
+     "tokens_per_question": 617
     }
    },
    "id": "C02",
@@ -307,10 +307,10 @@
     },
     "generic_mcp": {
      "accepted": false,
-     "lower": 0.2857,
+     "lower": 0.1056,
      "questions": 60,
-     "right": 24,
-     "tokens_per_question": 31138
+     "right": 11,
+     "tokens_per_question": 33560
     },
     "kit": {
      "accepted": true,
@@ -426,20 +426,20 @@
     },
     {
      "kind": "sheet",
-     "means": "archive, left out",
-     "seen": "ARCHIVE - ERP Setup",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
      "source": "inferred"
     },
     {
      "kind": "sheet",
      "means": "archive, left out",
-     "seen": "ARCHIVE - Fleet Launch",
+     "seen": "zz_ERP Setup (old)",
      "source": "inferred"
     },
     {
      "kind": "sheet",
      "means": "archive, left out",
-     "seen": "ARCHIVE - Plant Renewal",
+     "seen": "zz_Fleet Launch (old)",
      "source": "inferred"
     }
    ]
@@ -458,7 +458,7 @@
      "lower": 0.1312,
      "questions": 60,
      "right": 13,
-     "tokens_per_question": 25702
+     "tokens_per_question": 24070
     },
     "kit": {
      "accepted": true,
@@ -489,8 +489,8 @@
    "name": "Tailspin Retail",
    "pattern": "maker_checker",
    "regulated": false,
-   "review_items": 6,
-   "rows": 796,
+   "review_items": 8,
+   "rows": 703,
    "sheets": 12,
    "templates": 2,
    "translations": [
@@ -504,6 +504,18 @@
      "kind": "column",
      "means": "completion",
      "seen": "Completion",
+     "source": "admin"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "Billing Cutover 2024",
+     "source": "admin"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "Line Launch 2024",
      "source": "admin"
     },
     {
@@ -577,18 +589,6 @@
      "means": "assignee",
      "seen": "Responsible",
      "source": "inferred"
-    },
-    {
-     "kind": "sheet",
-     "means": "archive, left out",
-     "seen": "Billing Cutover [closed]",
-     "source": "inferred"
-    },
-    {
-     "kind": "sheet",
-     "means": "archive, left out",
-     "seen": "Line Launch [closed]",
-     "source": "inferred"
     }
    ]
   },
@@ -599,7 +599,7 @@
      "lower": 0.6099,
      "questions": 60,
      "right": 44,
-     "tokens_per_question": 505
+     "tokens_per_question": 507
     },
     "generic_mcp": {
      "accepted": false,
@@ -613,21 +613,21 @@
      "lower": 0.9114,
      "questions": 60,
      "right": 59,
-     "tokens_per_question": 542
+     "tokens_per_question": 544
     },
     "pack_as_context": {
      "accepted": false,
      "lower": 0.7197,
      "questions": 60,
      "right": 50,
-     "tokens_per_question": 36097
+     "tokens_per_question": 36099
     },
     "reviewed_pack": {
      "accepted": false,
      "lower": 0.6099,
      "questions": 60,
      "right": 44,
-     "tokens_per_question": 505
+     "tokens_per_question": 507
     }
    },
    "id": "C05",
@@ -638,7 +638,7 @@
    "pattern": "maker_checker",
    "regulated": false,
    "review_items": 1,
-   "rows": 1086,
+   "rows": 1056,
    "sheets": 19,
    "templates": 1,
    "translations": [
@@ -704,12 +704,6 @@
     },
     {
      "kind": "sheet",
-     "means": "archive, left out",
-     "seen": "ARCHIVE - ERP Upgrade",
-     "source": "inferred"
-    },
-    {
-     "kind": "sheet",
      "means": "not a plan, left out",
      "seen": "Project Intake",
      "source": "inferred"
@@ -724,6 +718,12 @@
      "kind": "sheet",
      "means": "not a plan, left out",
      "seen": "Resource Plan",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "zz_ERP Upgrade (old)",
      "source": "inferred"
     },
     {
@@ -1475,13 +1475,13 @@
      "lower": 0.7008,
      "questions": 60,
      "right": 49,
-     "tokens_per_question": 648
+     "tokens_per_question": 650
     },
     "generic_mcp": {
      "accepted": false,
-     "lower": -0.0,
+     "lower": 0.0092,
      "questions": 60,
-     "right": 0,
+     "right": 2,
      "tokens_per_question": 46818
     },
     "kit": {
@@ -1489,21 +1489,21 @@
      "lower": 0.9398,
      "questions": 60,
      "right": 60,
-     "tokens_per_question": 680
+     "tokens_per_question": 681
     },
     "pack_as_context": {
      "accepted": false,
      "lower": 0.7008,
      "questions": 60,
      "right": 49,
-     "tokens_per_question": 46914
+     "tokens_per_question": 46915
     },
     "reviewed_pack": {
      "accepted": false,
      "lower": 0.7008,
      "questions": 60,
      "right": 49,
-     "tokens_per_question": 648
+     "tokens_per_question": 650
     }
    },
    "id": "C11",
@@ -1514,7 +1514,7 @@
    "pattern": "maker_checker_approval",
    "regulated": true,
    "review_items": 1,
-   "rows": 1346,
+   "rows": 1354,
    "sheets": 23,
    "templates": 2,
    "translations": [
@@ -1604,14 +1604,14 @@
     },
     {
      "kind": "sheet",
-     "means": "not a plan, left out",
-     "seen": "Project Intake",
+     "means": "archive, left out",
+     "seen": "Line Integration [closed]",
      "source": "inferred"
     },
     {
      "kind": "sheet",
-     "means": "not a plan, left out",
-     "seen": "RAID Log",
+     "means": "archive, left out",
+     "seen": "Payroll Expansion [closed]",
      "source": "inferred"
     }
    ]
@@ -1763,7 +1763,7 @@
    "latency_s": 0.92,
    "questions": 720,
    "right": 611,
-   "tokens_per_question": 536,
+   "tokens_per_question": 537,
    "wrong_by_cause": {
     "customer's own word": 27,
     "question misread": 8,
@@ -1771,25 +1771,25 @@
    }
   },
   "generic_mcp": {
-   "accuracy": 0.3042,
+   "accuracy": 0.2889,
    "consultant_hours_per_customer": 0.0,
-   "cost_per_1000_questions_eur": 107.72,
+   "cost_per_1000_questions_eur": 108.12,
    "customers": 12,
    "customers_accepted": 0,
-   "latency_s": 2.4,
+   "latency_s": 2.41,
    "questions": 720,
-   "right": 219,
-   "tokens_per_question": 37572,
+   "right": 208,
+   "tokens_per_question": 37715,
    "wrong_by_cause": {
     "customer's own word": 27,
     "question misread": 8,
-    "row miscounted while reading": 173,
-    "wrong semantics": 293
+    "row miscounted while reading": 172,
+    "wrong semantics": 305
    }
   },
   "kit": {
    "accuracy": 0.9889,
-   "consultant_hours_per_customer": 1.62,
+   "consultant_hours_per_customer": 1.63,
    "cost_per_1000_questions_eur": 4.08,
    "customers": 12,
    "customers_accepted": 12,
@@ -1803,7 +1803,7 @@
   },
   "pack_as_context": {
    "accuracy": 0.8361,
-   "consultant_hours_per_customer": 1.12,
+   "consultant_hours_per_customer": 1.13,
    "cost_per_1000_questions_eur": 105.87,
    "customers": 12,
    "customers_accepted": 3,
@@ -1818,14 +1818,14 @@
   },
   "reviewed_pack": {
    "accuracy": 0.8514,
-   "consultant_hours_per_customer": 0.12,
+   "consultant_hours_per_customer": 0.13,
    "cost_per_1000_questions_eur": 4.02,
    "customers": 12,
    "customers_accepted": 1,
    "latency_s": 0.92,
    "questions": 720,
    "right": 613,
-   "tokens_per_question": 536,
+   "tokens_per_question": 537,
    "wrong_by_cause": {
     "customer's own word": 27,
     "question misread": 8,
@@ -1928,7 +1928,7 @@
    "C01": {
     "draft_problems": 3,
     "problems": [],
-    "questions_for_admin": 4,
+    "questions_for_admin": 5,
     "ready": true,
     "runbook_steps": 6
    },
@@ -1949,7 +1949,7 @@
    "C04": {
     "draft_problems": 3,
     "problems": [],
-    "questions_for_admin": 6,
+    "questions_for_admin": 8,
     "ready": true,
     "runbook_steps": 6
    },
@@ -2046,6 +2046,7 @@
     },
     "projects": 21,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.05,
     "why": "one agent alone was wrong on 3 of 42 pilot lines; at 95% confidence that could be 17%, above the 5% the customer accepts"
    },
@@ -2080,6 +2081,7 @@
     },
     "projects": 18,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.01,
     "why": "one agent alone was wrong on 2 of 36 pilot lines; at 95% confidence that could be 15%, above the 1% the customer accepts"
    },
@@ -2114,6 +2116,7 @@
     },
     "projects": 13,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.01,
     "why": "one agent alone was wrong on 2 of 26 pilot lines; at 95% confidence that could be 21%, above the 1% the customer accepts"
    },
@@ -2148,6 +2151,7 @@
     },
     "projects": 9,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.05,
     "why": "one agent alone was wrong on 2 of 18 pilot lines; at 95% confidence that could be 29%, above the 5% the customer accepts"
    },
@@ -2182,6 +2186,7 @@
     },
     "projects": 15,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.05,
     "why": "one agent alone was wrong on 0 of 30 pilot lines; at 95% confidence that could be 8%, above the 5% the customer accepts"
    },
@@ -2216,6 +2221,7 @@
     },
     "projects": 7,
     "regulated": true,
+    "switched_on": true,
     "tolerance": 0.01,
     "why": "regulated, so a person approves every line and the trail is kept"
    },
@@ -2250,6 +2256,7 @@
     },
     "projects": 15,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.0,
     "why": "one agent alone was wrong on 4 of 30 pilot lines; at 95% confidence that could be 27%, above the 0% the customer accepts"
    },
@@ -2284,6 +2291,7 @@
     },
     "projects": 8,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.0,
     "why": "one agent alone was wrong on 0 of 16 pilot lines; at 95% confidence that could be 14%, above the 0% the customer accepts"
    },
@@ -2318,6 +2326,7 @@
     },
     "projects": 6,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.0,
     "why": "one agent alone was wrong on 0 of 12 pilot lines; at 95% confidence that could be 18%, above the 0% the customer accepts"
    },
@@ -2352,6 +2361,7 @@
     },
     "projects": 20,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.01,
     "why": "one agent alone was wrong on 2 of 40 pilot lines; at 95% confidence that could be 14%, above the 1% the customer accepts"
    },
@@ -2386,6 +2396,7 @@
     },
     "projects": 18,
     "regulated": true,
+    "switched_on": true,
     "tolerance": 0.01,
     "why": "regulated, so a person approves every line and the trail is kept"
    },
@@ -2420,12 +2431,14 @@
     },
     "projects": 19,
     "regulated": false,
+    "switched_on": true,
     "tolerance": 0.01,
     "why": "one agent alone was wrong on 2 of 38 pilot lines; at 95% confidence that could be 15%, above the 1% the customer accepts"
    }
   ],
   "totals": {
    "chosen": {
+    "held_back": 0,
     "lines": 338,
     "llm_calls": 356,
     "over_tolerance": 0,
@@ -2461,8 +2474,8 @@
   ],
   "questions": 720,
   "regulated": 2,
-  "review_items": 28,
-  "rows": 12879,
+  "review_items": 31,
+  "rows": 12790,
   "sheets": 211,
   "with_legacy_template": 6
  },

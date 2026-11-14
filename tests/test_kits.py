@@ -92,3 +92,10 @@ def test_the_checker_turns_slips_into_redrafts_and_escalations():
     single = patterns.simulate("single", projects, range(3), always, always, pcfg, lambda n: True)
     mc = patterns.simulate("maker_checker", projects, range(3), always, always, pcfg, lambda n: True)
     assert single.wrong == 3 and mc.wrong == 0 and mc.escalation_minutes == 12 and mc.llm_calls == 6
+
+
+def test_the_lint_catches_a_rule_the_columns_cannot_support(cfg):
+    files, pack, result = _kit(cfg)
+    pack["rules"]["done"] = "checkbox"
+    pack["templates"] = {"S": {"roles": {"task": "Task"}, "status_values": {}, "progress": "fraction", "dates": "iso"}}
+    assert any("no template has a done column" in p for p in kits.lint(files, pack, result, cfg))

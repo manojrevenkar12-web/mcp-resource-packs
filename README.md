@@ -13,16 +13,16 @@ with code, picks the **multi-agent pattern** that writes their weekly status lin
 **Deployment Kit** a solutions consultant with no engineering background can follow, with a lint that says when a kit
 is not done.
 
-On 12 simulated customers (211 sheets, 12,879 rows, 6 with an older template still in use) and their
+On 12 simulated customers (211 sheets, 12,790 rows, 6 with an older template still in use) and their
 720 questions:
 
-- **98.9% answered right with the kit against 30.4% for an assistant reading raw sheets**, and
+- **98.9% answered right with the kit against 28.9% for an assistant reading raw sheets**, and
   12 of 12 customers past the acceptance bar against 0.
-- **558 tokens per question against 37,572**: €4.08 per 1,000 questions
-  against €107.72. The pack alone, given as context while the assistant still reads rows, gets
+- **558 tokens per question against 37,715**: €4.08 per 1,000 questions
+  against €108.12. The pack alone, given as context while the assistant still reads rows, gets
   83.6%: the meanings fix the semantics, the query tool fixes the arithmetic.
 - **1.6 consultant hours per customer**, most of it the workshop. Inference made
-  28 decisions it was unsure of across all customers; every decision it was sure of was right.
+  31 decisions it was unsure of across all customers; every decision it was sure of was right.
 - **0 wrong status lines** from the patterns chosen per customer, against 18 of 338 for one agent alone;
   regulated customers get a person approving every line (50 person minutes in all).
 - **12 of 12 Deployment Kits pass the lint.**
@@ -48,17 +48,17 @@ a customer's 60 questions answered right, at least 85%.
 
 | Design | Questions answered right | Customers accepted | Tokens per question | Cost per 1,000 questions | Consultant time per customer |
 |---|--:|--:|--:|--:|--:|
-| Assistant reads raw sheets | 30.4% (219/720) | 0 of 12 | 37,572 | €107.72 | 0.0 h |
+| Assistant reads raw sheets | 28.9% (208/720) | 0 of 12 | 37,715 | €108.12 | 0.0 h |
 | Pack as context, assistant reads rows | 83.6% (602/720) | 3 of 12 | 36,911 | €105.87 | 1.1 h |
-| Drafted pack + query tool | 84.9% (611/720) | 1 of 12 | 536 | €4.02 | 0.0 h |
-| Reviewed pack + query tool | 85.1% (613/720) | 1 of 12 | 536 | €4.02 | 0.1 h |
+| Drafted pack + query tool | 84.9% (611/720) | 1 of 12 | 537 | €4.02 | 0.0 h |
+| Reviewed pack + query tool | 85.1% (613/720) | 1 of 12 | 537 | €4.02 | 0.1 h |
 | **Deployment Kit** (reviewed + workshop + query tool) | 98.9% (712/720) | 12 of 12 | 558 | €4.08 | 1.6 h |
 
 Why answers went wrong:
 
 | Design | Customer's own word | Question misread | Row miscounted while reading | Wrong semantics |
 |---|--:|--:|--:|--:|
-| Assistant reads raw sheets | 27 | 8 | 173 | 293 |
+| Assistant reads raw sheets | 27 | 8 | 172 | 305 |
 | Pack as context, assistant reads rows | 0 | 8 | 110 | 0 |
 | Drafted pack + query tool | 27 | 8 | 0 | 74 |
 | Reviewed pack + query tool | 27 | 8 | 0 | 72 |
@@ -84,7 +84,8 @@ Why answers went wrong:
 One agent alone writes wrong lines (a miscount, a wrong colour). A pilot of 2 weeks cannot show that rate is within
 a customer's tolerance at 95% confidence, so no customer got the single agent: the checker costs
 18 extra LLM calls in 338 lines and removes the wrong ones. Regulated customers
-(2) get approval on every line for the audit trail, not for accuracy.
+(2) get approval on every line for the audit trail, not for accuracy. Agents write only for
+customers whose kit passes its lint: the checker is only as right as the pack it checks with.
 
 ## Field findings for the platform
 
@@ -104,7 +105,21 @@ proposed additions to the base vocabulary (`src/resourcepacks/lexicon.py`):
 
 ## Held-out world (run once)
 
-Not run yet. `python scripts/evaluate.py --heldout` runs it once and writes `config/heldout.lock`.
+Other customers: 14 of them, 244 sheets, 14,941 rows, in de, en, fr. Status picklists in
+emoji and in words the base vocabulary has never seen, progress typed as "45 %", older templates with dates typed as
+text, archives named only by a year. Run once with the code and settings the dev world ended on (`config/heldout.lock`).
+
+| Design | Questions answered right | Customers accepted | Tokens per question | Cost per 1,000 questions | Consultant time per customer |
+|---|--:|--:|--:|--:|--:|
+| Assistant reads raw sheets | 35.5% (298/840) | 0 of 14 | 36,797 | €105.55 | 0.0 h |
+| Pack as context, assistant reads rows | 74.9% (629/840) | 2 of 14 | 36,105 | €103.61 | 1.2 h |
+| Drafted pack + query tool | 76.3% (641/840) | 0 of 14 | 535 | €4.02 | 0.0 h |
+| Reviewed pack + query tool | 78.9% (663/840) | 0 of 14 | 535 | €4.02 | 0.2 h |
+| **Deployment Kit** (reviewed + workshop + query tool) | 93.9% (789/840) | 13 of 14 | 558 | €4.08 | 1.7 h |
+
+13 of 14 kits passed their lint. Before the change that holds writes back until a kit passes, the chosen patterns wrote
+34 wrong lines out of 384. What went wrong and what changed afterwards:
+[docs/heldout.md](docs/heldout.md).
 
 ## The MCP server
 

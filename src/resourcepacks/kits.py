@@ -68,6 +68,8 @@ def question_for(item: dict, sheet_names: dict[str, str]) -> str:
             "other": "not a project plan",
         }
         return f'Is the sheet "{sheet}" {what.get(v, v)}?'
+    if k == "role" and v is None:
+        return f'In "{sheet}" and sheets like it, what does the column "{item["key"]}" hold?'
     if k == "role":
         return f'In "{sheet}" and sheets like it, does the column "{item["key"]}" hold {ROLE_WORDS.get(v, v)}?'
     if k == "status_value":
@@ -203,6 +205,16 @@ def lint(files: dict[str, str], pack: dict, result: dict, cfg: dict) -> list[str
     rules_open = [i["key"] for i in pack.get("items", []) if i["kind"] == "rule" and i["source"] != "workshop"]
     if rules_open:
         out.append("rules not settled in the workshop: " + ", ".join(rules_open))
+    used = [
+        t
+        for sig, t in pack["templates"].items()
+        if any(m["template"] == sig and m["kind"] == "project" for m in pack["sheets"].values())
+    ]
+    # A rule that needs a column no live template has cannot be applied anywhere (older templates may lack it).
+    if used and pack["rules"]["done"] == "checkbox" and not any("done" in t["roles"] for t in used):
+        out.append("the workshop says done means a ticked box, but no template has a done column")
+    if used and pack["rules"]["milestone"] == "flag" and not any("milestone" in t["roles"] for t in used):
+        out.append("the workshop says milestones are ticked, but no template has a milestone column")
     if result["lower"] < cfg["acceptance"]["target"]:
         out.append(
             f"acceptance lower bound {result['lower']:.1%} is under the {cfg['acceptance']['target']:.0%} target"
