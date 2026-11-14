@@ -1,0 +1,29 @@
+# How packs are drafted, reviewed and accepted. The world never reads this file.
+review_threshold = 0.8         # decisions below this confidence become questions for the customer's admin
+
+[defaults]
+project_at_risk_share = 0.2    # until the workshop says otherwise
+
+[effort]                       # consultant minutes
+review_item = 3
+workshop = 60
+kit_handover = 30
+
+[acceptance]
+target = 0.85                  # lower bound (Wilson, 95%) on the share of the customer's questions answered right
+z = 1.96
+
+[prices]
+llm_in_per_mtok_eur = 2.8
+llm_out_per_mtok_eur = 14.0
+consultant_eur_per_hour = 95.0
+
+# Which coordination pattern writes a customer's weekly status roll-up. Chosen from the workshop answers:
+# a regulated customer gets a person approving every line with an audit trail; otherwise the cheapest pattern whose
+# measured wrong-line rate on the pilot week stays within the customer's tolerance.
+[patterns]
+order = ["single", "maker_checker", "maker_checker_approval"]
+approver_minutes = 1.0
+escalation_minutes = 4.0
+pilot_weeks = 2
+max_redrafts = 1

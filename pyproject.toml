@@ -1,0 +1,31 @@
+[project]
+name = "mcp-resource-packs"
+version = "0.1.0"
+description = "Per-customer MCP resource packs for Smartsheet workspaces: inferred, reviewed, served, measured, handed over as Deployment Kits"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "hypothesis>=6"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "scripts"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+extend-exclude = ["server", "web"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "E741"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/*" = ["E402"]

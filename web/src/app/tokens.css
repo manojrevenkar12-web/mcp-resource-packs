@@ -1,0 +1,58 @@
+/* A sheet on a cool desk: white grid, ink type, condensed column headers. Teal is what the kit gets right, raspberry
+   is a wrong answer, violet is what a person confirmed. */
+:root {
+  --desk: #eef1f5;
+  --sheet: #ffffff;
+  --ink: #141b2d;
+  --ink-muted: #5b6478;
+  --grid: #d5dae3;
+  --grid-soft: #e7eaf0;
+  --kit: #0e7c76;
+  --kit-soft: #cfe8e5;
+  --raw: #8c95a8;
+  --wrong: #b3324f;
+  --wrong-soft: #f3d6dd;
+  --admin: #5b4bb7;
+  --admin-soft: #e3dff5;
+  --focus: #1d5fbf;
+
+  --font: "Schibsted Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-cond: "Barlow Condensed", "Arial Narrow", sans-serif;
+
+  --t-xs: 0.8rem;
+  --t-sm: 0.9rem;
+  --t-md: 1rem;
+  --t-lg: 1.25rem;
+  --t-xl: 1.563rem;
+  --t-2xl: 2.441rem;
+  --t-3xl: 3.2rem;
+  --lh-tight: 1.06;
+  --lh-text: 1.5;
+  --track-tight: -0.02em;
+
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+
+  --page: 76rem;
+  --hero-w: 60rem;
+  --measure: 68ch;
+  --radius: 4px;
+  --stroke: 1px;
+  --stroke-bold: 3px;
+  --bar-h: 0.9rem;
+  --name-w: 17rem;
+  --cell-h: 2.4rem;
+  --chip-gap: 0.4rem;
+  --dim: 0.5;
+  --pulse: 1.4s;
+  --pair: 1fr 1fr;
+  --three: minmax(10rem, 1fr) 1.4rem minmax(10rem, 1fr) 11rem;
+  --accepted-w: 6rem;
+  --figure-w: 4.5rem;
+}

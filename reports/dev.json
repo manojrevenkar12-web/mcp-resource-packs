@@ -1,0 +1,2470 @@
+{
+ "customers": [
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.6456,
+     "questions": 60,
+     "right": 46,
+     "tokens_per_question": 697
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.1578,
+     "questions": 60,
+     "right": 15,
+     "tokens_per_question": 47572
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.8864,
+     "questions": 60,
+     "right": 58,
+     "tokens_per_question": 687
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.6099,
+     "questions": 60,
+     "right": 44,
+     "tokens_per_question": 45081
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.6638,
+     "questions": 60,
+     "right": 47,
+     "tokens_per_question": 697
+    }
+   },
+   "id": "C01",
+   "industry": "software",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Northwind Software",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 4,
+   "rows": 1366,
+   "sheets": 24,
+   "templates": 2,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Completion",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "Critical",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "OK",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Watch",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 7 days and under 90% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"gate\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "% Complete",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "End Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Gate",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Health",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "RAG",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Responsible",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "Project Intake",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7583,
+     "questions": 60,
+     "right": 52,
+     "tokens_per_question": 616
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.3463,
+     "questions": 60,
+     "right": 28,
+     "tokens_per_question": 49838
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 644
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.6099,
+     "questions": 60,
+     "right": 44,
+     "tokens_per_question": 49460
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7782,
+     "questions": 60,
+     "right": 53,
+     "tokens_per_question": 616
+    }
+   },
+   "id": "C02",
+   "industry": "manufacturing",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Contoso Manufacturing",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 3,
+   "rows": 1400,
+   "sheets": 21,
+   "templates": 2,
+   "translations": [
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "Critical",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "OK",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Watch",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 14 days and under 90% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"slipping\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Assigned To",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Complete?",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Finish",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Key Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Milestone",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Percent Complete",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Progress",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Project Health",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "RAG",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Responsible",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7389,
+     "questions": 60,
+     "right": 51,
+     "tokens_per_question": 567
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.2857,
+     "questions": 60,
+     "right": 24,
+     "tokens_per_question": 31138
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 587
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.6822,
+     "questions": 60,
+     "right": 48,
+     "tokens_per_question": 31595
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7389,
+     "questions": 60,
+     "right": 51,
+     "tokens_per_question": 567
+    }
+   },
+   "id": "C03",
+   "industry": "manufacturing",
+   "kit_ready": true,
+   "lang": "de",
+   "name": "Fabrikam Manufacturing",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 2,
+   "rows": 1032,
+   "sheets": 17,
+   "templates": 2,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "% Fertig",
+     "source": "admin"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Erledigt %",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 7 days and under 90% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "rule",
+     "means": "fiscal quarter, year from Jul",
+     "seen": "this quarter",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"checkpoint\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"on watch\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "project",
+     "seen": "\"workstream\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Ampel",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Beginn",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Gate",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Termin",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Verantwortlich",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Zuständig",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - ERP Setup",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Fleet Launch",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Plant Renewal",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.8193,
+     "questions": 60,
+     "right": 55,
+     "tokens_per_question": 487
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.1312,
+     "questions": 60,
+     "right": 13,
+     "tokens_per_question": 25702
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 503
+    },
+    "pack_as_context": {
+     "accepted": true,
+     "lower": 0.8864,
+     "questions": 60,
+     "right": 58,
+     "tokens_per_question": 22419
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.8193,
+     "questions": 60,
+     "right": 55,
+     "tokens_per_question": 487
+    }
+   },
+   "id": "C04",
+   "industry": "retail",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Tailspin Retail",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 6,
+   "rows": 796,
+   "sheets": 12,
+   "templates": 2,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Closed",
+     "source": "admin"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Completion",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "On Plan",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Slipping",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "box ticked, not 100%",
+     "seen": "done",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"slipping\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Begin",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Complete?",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "End Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Owner",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Percent Complete",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "RAG",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Responsible",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "Billing Cutover [closed]",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "Line Launch [closed]",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.6099,
+     "questions": 60,
+     "right": 44,
+     "tokens_per_question": 505
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.4249,
+     "questions": 60,
+     "right": 33,
+     "tokens_per_question": 35682
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9114,
+     "questions": 60,
+     "right": 59,
+     "tokens_per_question": 542
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.7197,
+     "questions": 60,
+     "right": 50,
+     "tokens_per_question": 36097
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.6099,
+     "questions": 60,
+     "right": 44,
+     "tokens_per_question": 505
+    }
+   },
+   "id": "C05",
+   "industry": "software",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Adatum Software",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 1,
+   "rows": 1086,
+   "sheets": 19,
+   "templates": 1,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Closed",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 14 days and under 80% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"amber\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "project",
+     "seen": "\"initiative\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"key date\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Health",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Percent Complete",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Responsible",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - ERP Upgrade",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "Project Intake",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "Resource Plan",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "A",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "G",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7008,
+     "questions": 60,
+     "right": 49,
+     "tokens_per_question": 386
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.0931,
+     "questions": 60,
+     "right": 10,
+     "tokens_per_question": 30186
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 421
+    },
+    "pack_as_context": {
+     "accepted": true,
+     "lower": 0.863,
+     "questions": 60,
+     "right": 57,
+     "tokens_per_question": 26090
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7008,
+     "questions": 60,
+     "right": 49,
+     "tokens_per_question": 386
+    }
+   },
+   "id": "C06",
+   "industry": "pharma",
+   "kit_ready": true,
+   "lang": "de",
+   "name": "Litware Pharma",
+   "pattern": "maker_checker_approval",
+   "regulated": true,
+   "review_items": 1,
+   "rows": 674,
+   "sheets": 10,
+   "templates": 1,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Erledigt %",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 14 days and under 90% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"key date\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"slipping\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Ampel",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Enddatum",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Erledigt",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Gate",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Zuständig",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "zz_ERP Setup (old)",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "zz_Warehouse Upgrade (old)",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "A",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "G",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "R",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7583,
+     "questions": 60,
+     "right": 52,
+     "tokens_per_question": 514
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.2131,
+     "questions": 60,
+     "right": 19,
+     "tokens_per_question": 51660
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9114,
+     "questions": 60,
+     "right": 59,
+     "tokens_per_question": 506
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.8407,
+     "questions": 60,
+     "right": 56,
+     "tokens_per_question": 51406
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7583,
+     "questions": 60,
+     "right": 52,
+     "tokens_per_question": 514
+    }
+   },
+   "id": "C07",
+   "industry": "software",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Proseware Software",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 0,
+   "rows": 1092,
+   "sheets": 17,
+   "templates": 1,
+   "translations": [
+    {
+     "kind": "rule",
+     "means": "fiscal quarter, year from Oct",
+     "seen": "this quarter",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"checkpoint\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"on watch\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Milestone",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Percent Complete",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "RAG",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Responsible",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - ERP Upgrade",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "Green",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "Red",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Yellow",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7583,
+     "questions": 60,
+     "right": 52,
+     "tokens_per_question": 431
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.0691,
+     "questions": 60,
+     "right": 8,
+     "tokens_per_question": 23612
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.863,
+     "questions": 60,
+     "right": 57,
+     "tokens_per_question": 457
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.6277,
+     "questions": 60,
+     "right": 45,
+     "tokens_per_question": 23948
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7583,
+     "questions": 60,
+     "right": 52,
+     "tokens_per_question": 431
+    }
+   },
+   "id": "C08",
+   "industry": "logistics",
+   "kit_ready": true,
+   "lang": "de",
+   "name": "Wingtip Logistics",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 5,
+   "rows": 768,
+   "sheets": 13,
+   "templates": 1,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Abgeschlossen",
+     "source": "admin"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Erledigt %",
+     "source": "admin"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Zustand",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "On Plan",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Slipping",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 7 days and under 80% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "rule",
+     "means": "box ticked, not 100%",
+     "seen": "done",
+     "source": "workshop"
+    },
+    {
+     "kind": "rule",
+     "means": "fiscal quarter, year from Oct",
+     "seen": "this quarter",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "project",
+     "seen": "\"initiative\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Beginn",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Fällig",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Gate",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Verantwortlich",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Lab Rollout",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Network Expansion",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Plant Refit",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": true,
+     "lower": 0.9114,
+     "questions": 60,
+     "right": 59,
+     "tokens_per_question": 375
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.081,
+     "questions": 60,
+     "right": 9,
+     "tokens_per_question": 11600
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9114,
+     "questions": 60,
+     "right": 59,
+     "tokens_per_question": 392
+    },
+    "pack_as_context": {
+     "accepted": true,
+     "lower": 0.9114,
+     "questions": 60,
+     "right": 59,
+     "tokens_per_question": 11868
+    },
+    "reviewed_pack": {
+     "accepted": true,
+     "lower": 0.9114,
+     "questions": 60,
+     "right": 59,
+     "tokens_per_question": 375
+    }
+   },
+   "id": "C09",
+   "industry": "construction",
+   "kit_ready": true,
+   "lang": "de",
+   "name": "Lucerne Construction",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 0,
+   "rows": 370,
+   "sheets": 9,
+   "templates": 1,
+   "translations": [
+    {
+     "kind": "rule",
+     "means": "box ticked, not 100%",
+     "seen": "done",
+     "source": "workshop"
+    },
+    {
+     "kind": "rule",
+     "means": "fiscal quarter, year from Apr",
+     "seen": "this quarter",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"amber\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Bearbeiter",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Erledigt",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Fortschritt",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Gate",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Termin",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Zustand",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Line Relaunch",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "Project Intake",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Gelb",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "Grün",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "Rot",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7389,
+     "questions": 60,
+     "right": 51,
+     "tokens_per_question": 659
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.3773,
+     "questions": 60,
+     "right": 30,
+     "tokens_per_question": 54172
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 689
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.6638,
+     "questions": 60,
+     "right": 47,
+     "tokens_per_question": 54727
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7389,
+     "questions": 60,
+     "right": 51,
+     "tokens_per_question": 659
+    }
+   },
+   "id": "C10",
+   "industry": "construction",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Margie Construction",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 5,
+   "rows": 1551,
+   "sheets": 24,
+   "templates": 2,
+   "translations": [
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "Critical",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "OK",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "On Plan",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Slipping",
+     "source": "admin"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "Watch",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 7 days and under 80% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"gate\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "project",
+     "seen": "\"workstream\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "% Complete",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Done",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "End Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Finish",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Gate",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Owner",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Progress",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Project Health",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7008,
+     "questions": 60,
+     "right": 49,
+     "tokens_per_question": 648
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": -0.0,
+     "questions": 60,
+     "right": 0,
+     "tokens_per_question": 46818
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 680
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.7008,
+     "questions": 60,
+     "right": 49,
+     "tokens_per_question": 46914
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7008,
+     "questions": 60,
+     "right": 49,
+     "tokens_per_question": 648
+    }
+   },
+   "id": "C11",
+   "industry": "public sector",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Alpine Public Sector",
+   "pattern": "maker_checker_approval",
+   "regulated": true,
+   "review_items": 1,
+   "rows": 1346,
+   "sheets": 23,
+   "templates": 2,
+   "translations": [
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Closed",
+     "source": "admin"
+    },
+    {
+     "kind": "rule",
+     "means": "status, or due in 14 days and under 90% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "rule",
+     "means": "box ticked, not 100%",
+     "seen": "done",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "project",
+     "seen": "\"initiative\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "milestone",
+     "seen": "\"key date\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "signed-off box",
+     "seen": "Done",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Finish",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "milestone box",
+     "seen": "Key Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Owner",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Progress",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Project Health",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "RAG",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Start Date",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "Project Intake",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
+     "source": "inferred"
+    }
+   ]
+  },
+  {
+   "designs": {
+    "drafted_pack": {
+     "accepted": false,
+     "lower": 0.7389,
+     "questions": 60,
+     "right": 51,
+     "tokens_per_question": 548
+    },
+    "generic_mcp": {
+     "accepted": false,
+     "lower": 0.3773,
+     "questions": 60,
+     "right": 30,
+     "tokens_per_question": 42878
+    },
+    "kit": {
+     "accepted": true,
+     "lower": 0.9398,
+     "questions": 60,
+     "right": 60,
+     "tokens_per_question": 583
+    },
+    "pack_as_context": {
+     "accepted": false,
+     "lower": 0.6277,
+     "questions": 60,
+     "right": 45,
+     "tokens_per_question": 43328
+    },
+    "reviewed_pack": {
+     "accepted": false,
+     "lower": 0.7389,
+     "questions": 60,
+     "right": 51,
+     "tokens_per_question": 548
+    }
+   },
+   "id": "C12",
+   "industry": "energy",
+   "kit_ready": true,
+   "lang": "en",
+   "name": "Coho Energy",
+   "pattern": "maker_checker",
+   "regulated": false,
+   "review_items": 0,
+   "rows": 1398,
+   "sheets": 22,
+   "templates": 1,
+   "translations": [
+    {
+     "kind": "rule",
+     "means": "status, or due in 7 days and under 80% done",
+     "seen": "at risk",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "project",
+     "seen": "\"initiative\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "word",
+     "means": "at risk",
+     "seen": "\"slipping\"",
+     "source": "workshop"
+    },
+    {
+     "kind": "column",
+     "means": "assignee",
+     "seen": "Assigned To",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "start date",
+     "seen": "Begin",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "due date",
+     "seen": "Due",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "completion",
+     "seen": "Progress",
+     "source": "inferred"
+    },
+    {
+     "kind": "column",
+     "means": "traffic-light status",
+     "seen": "Project Health",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - ERP Consolidation",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "archive, left out",
+     "seen": "ARCHIVE - Portal Renewal",
+     "source": "inferred"
+    },
+    {
+     "kind": "sheet",
+     "means": "not a plan, left out",
+     "seen": "RAID Log",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "at risk",
+     "seen": "A",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "on track",
+     "seen": "G",
+     "source": "inferred"
+    },
+    {
+     "kind": "value",
+     "means": "off track",
+     "seen": "R",
+     "source": "inferred"
+    }
+   ]
+  }
+ ],
+ "designs": {
+  "drafted_pack": {
+   "accuracy": 0.8486,
+   "consultant_hours_per_customer": 0.0,
+   "cost_per_1000_questions_eur": 4.02,
+   "customers": 12,
+   "customers_accepted": 1,
+   "latency_s": 0.92,
+   "questions": 720,
+   "right": 611,
+   "tokens_per_question": 536,
+   "wrong_by_cause": {
+    "customer's own word": 27,
+    "question misread": 8,
+    "wrong semantics": 74
+   }
+  },
+  "generic_mcp": {
+   "accuracy": 0.3042,
+   "consultant_hours_per_customer": 0.0,
+   "cost_per_1000_questions_eur": 107.72,
+   "customers": 12,
+   "customers_accepted": 0,
+   "latency_s": 2.4,
+   "questions": 720,
+   "right": 219,
+   "tokens_per_question": 37572,
+   "wrong_by_cause": {
+    "customer's own word": 27,
+    "question misread": 8,
+    "row miscounted while reading": 173,
+    "wrong semantics": 293
+   }
+  },
+  "kit": {
+   "accuracy": 0.9889,
+   "consultant_hours_per_customer": 1.62,
+   "cost_per_1000_questions_eur": 4.08,
+   "customers": 12,
+   "customers_accepted": 12,
+   "latency_s": 0.92,
+   "questions": 720,
+   "right": 712,
+   "tokens_per_question": 558,
+   "wrong_by_cause": {
+    "question misread": 8
+   }
+  },
+  "pack_as_context": {
+   "accuracy": 0.8361,
+   "consultant_hours_per_customer": 1.12,
+   "cost_per_1000_questions_eur": 105.87,
+   "customers": 12,
+   "customers_accepted": 3,
+   "latency_s": 2.38,
+   "questions": 720,
+   "right": 602,
+   "tokens_per_question": 36911,
+   "wrong_by_cause": {
+    "question misread": 8,
+    "row miscounted while reading": 110
+   }
+  },
+  "reviewed_pack": {
+   "accuracy": 0.8514,
+   "consultant_hours_per_customer": 0.12,
+   "cost_per_1000_questions_eur": 4.02,
+   "customers": 12,
+   "customers_accepted": 1,
+   "latency_s": 0.92,
+   "questions": 720,
+   "right": 613,
+   "tokens_per_question": 536,
+   "wrong_by_cause": {
+    "customer's own word": 27,
+    "question misread": 8,
+    "wrong semantics": 72
+   }
+  }
+ },
+ "findings": {
+  "customers": 12,
+  "proposals": [
+   {
+    "answer": "done",
+    "customers": [
+     "C04",
+     "C05",
+     "C11"
+    ],
+    "key": "closed",
+    "kind": "role"
+   },
+   {
+    "answer": "progress",
+    "customers": [
+     "C03",
+     "C06",
+     "C08"
+    ],
+    "key": "erledigt %",
+    "kind": "role"
+   },
+   {
+    "answer": "off_track",
+    "customers": [
+     "C01",
+     "C02",
+     "C10"
+    ],
+    "key": "critical",
+    "kind": "status_value"
+   },
+   {
+    "answer": "on_track",
+    "customers": [
+     "C01",
+     "C02",
+     "C10"
+    ],
+    "key": "ok",
+    "kind": "status_value"
+   },
+   {
+    "answer": "on_track",
+    "customers": [
+     "C04",
+     "C08",
+     "C10"
+    ],
+    "key": "on plan",
+    "kind": "status_value"
+   },
+   {
+    "answer": "at_risk",
+    "customers": [
+     "C04",
+     "C08",
+     "C10"
+    ],
+    "key": "slipping",
+    "kind": "status_value"
+   },
+   {
+    "answer": "at_risk",
+    "customers": [
+     "C01",
+     "C02",
+     "C10"
+    ],
+    "key": "watch",
+    "kind": "status_value"
+   },
+   {
+    "answer": "progress",
+    "customers": [
+     "C01",
+     "C04"
+    ],
+    "key": "completion",
+    "kind": "role"
+   }
+  ],
+  "rules_not_default": {
+   "at_risk": 9,
+   "fiscal_start_month": 4,
+   "glossary": 12,
+   "project_at_risk_share": 12
+  }
+ },
+ "kits": {
+  "per_customer": {
+   "C01": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 4,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C02": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 3,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C03": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 2,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C04": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 6,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C05": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 1,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C06": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 1,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C07": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 0,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C08": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 5,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C09": {
+    "draft_problems": 2,
+    "problems": [],
+    "questions_for_admin": 0,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C10": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 5,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C11": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 1,
+    "ready": true,
+    "runbook_steps": 6
+   },
+   "C12": {
+    "draft_problems": 3,
+    "problems": [],
+    "questions_for_admin": 0,
+    "ready": true,
+    "runbook_steps": 6
+   }
+  },
+  "ready": 12,
+  "total": 12
+ },
+ "patterns": {
+  "per_customer": [
+   {
+    "chosen": "maker_checker",
+    "customer": "C01",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 42,
+      "llm_calls": 43,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 42,
+      "llm_calls": 43,
+      "person_minutes": 42.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 42,
+      "llm_calls": 42,
+      "person_minutes": 0.0,
+      "wrong": 1,
+      "wrong_rate": 0.0238
+     }
+    },
+    "projects": 21,
+    "regulated": false,
+    "tolerance": 0.05,
+    "why": "one agent alone was wrong on 3 of 42 pilot lines; at 95% confidence that could be 17%, above the 5% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C02",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 36,
+      "llm_calls": 38,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 36,
+      "llm_calls": 38,
+      "person_minutes": 36.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 36,
+      "llm_calls": 36,
+      "person_minutes": 0.0,
+      "wrong": 2,
+      "wrong_rate": 0.0556
+     }
+    },
+    "projects": 18,
+    "regulated": false,
+    "tolerance": 0.01,
+    "why": "one agent alone was wrong on 2 of 36 pilot lines; at 95% confidence that could be 15%, above the 1% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C03",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 26,
+      "llm_calls": 28,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 26,
+      "llm_calls": 28,
+      "person_minutes": 26.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 26,
+      "llm_calls": 26,
+      "person_minutes": 0.0,
+      "wrong": 2,
+      "wrong_rate": 0.0769
+     }
+    },
+    "projects": 13,
+    "regulated": false,
+    "tolerance": 0.01,
+    "why": "one agent alone was wrong on 2 of 26 pilot lines; at 95% confidence that could be 21%, above the 1% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C04",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 18,
+      "llm_calls": 18,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 18,
+      "llm_calls": 18,
+      "person_minutes": 18.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 18,
+      "llm_calls": 18,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     }
+    },
+    "projects": 9,
+    "regulated": false,
+    "tolerance": 0.05,
+    "why": "one agent alone was wrong on 2 of 18 pilot lines; at 95% confidence that could be 29%, above the 5% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C05",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 30,
+      "llm_calls": 33,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 30,
+      "llm_calls": 33,
+      "person_minutes": 30.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 30,
+      "llm_calls": 30,
+      "person_minutes": 0.0,
+      "wrong": 3,
+      "wrong_rate": 0.1
+     }
+    },
+    "projects": 15,
+    "regulated": false,
+    "tolerance": 0.05,
+    "why": "one agent alone was wrong on 0 of 30 pilot lines; at 95% confidence that could be 8%, above the 5% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker_approval",
+    "customer": "C06",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 14,
+      "llm_calls": 15,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 14,
+      "llm_calls": 15,
+      "person_minutes": 14.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 14,
+      "llm_calls": 14,
+      "person_minutes": 0.0,
+      "wrong": 1,
+      "wrong_rate": 0.0714
+     }
+    },
+    "projects": 7,
+    "regulated": true,
+    "tolerance": 0.01,
+    "why": "regulated, so a person approves every line and the trail is kept"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C07",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 30,
+      "llm_calls": 33,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 30,
+      "llm_calls": 33,
+      "person_minutes": 30.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 30,
+      "llm_calls": 30,
+      "person_minutes": 0.0,
+      "wrong": 3,
+      "wrong_rate": 0.1
+     }
+    },
+    "projects": 15,
+    "regulated": false,
+    "tolerance": 0.0,
+    "why": "one agent alone was wrong on 4 of 30 pilot lines; at 95% confidence that could be 27%, above the 0% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C08",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 16,
+      "llm_calls": 16,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 16,
+      "llm_calls": 16,
+      "person_minutes": 16.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 16,
+      "llm_calls": 16,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     }
+    },
+    "projects": 8,
+    "regulated": false,
+    "tolerance": 0.0,
+    "why": "one agent alone was wrong on 0 of 16 pilot lines; at 95% confidence that could be 14%, above the 0% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C09",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 12,
+      "llm_calls": 13,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 12,
+      "llm_calls": 13,
+      "person_minutes": 12.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 12,
+      "llm_calls": 12,
+      "person_minutes": 0.0,
+      "wrong": 1,
+      "wrong_rate": 0.0833
+     }
+    },
+    "projects": 6,
+    "regulated": false,
+    "tolerance": 0.0,
+    "why": "one agent alone was wrong on 0 of 12 pilot lines; at 95% confidence that could be 18%, above the 0% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C10",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 40,
+      "llm_calls": 41,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 40,
+      "llm_calls": 41,
+      "person_minutes": 40.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 40,
+      "llm_calls": 40,
+      "person_minutes": 0.0,
+      "wrong": 1,
+      "wrong_rate": 0.025
+     }
+    },
+    "projects": 20,
+    "regulated": false,
+    "tolerance": 0.01,
+    "why": "one agent alone was wrong on 2 of 40 pilot lines; at 95% confidence that could be 14%, above the 1% the customer accepts"
+   },
+   {
+    "chosen": "maker_checker_approval",
+    "customer": "C11",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 36,
+      "llm_calls": 36,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 36,
+      "llm_calls": 36,
+      "person_minutes": 36.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 36,
+      "llm_calls": 36,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     }
+    },
+    "projects": 18,
+    "regulated": true,
+    "tolerance": 0.01,
+    "why": "regulated, so a person approves every line and the trail is kept"
+   },
+   {
+    "chosen": "maker_checker",
+    "customer": "C12",
+    "outcomes": {
+     "maker_checker": {
+      "audit_trail": false,
+      "lines": 38,
+      "llm_calls": 42,
+      "person_minutes": 0.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "maker_checker_approval": {
+      "audit_trail": true,
+      "lines": 38,
+      "llm_calls": 42,
+      "person_minutes": 38.0,
+      "wrong": 0,
+      "wrong_rate": 0.0
+     },
+     "single": {
+      "audit_trail": false,
+      "lines": 38,
+      "llm_calls": 38,
+      "person_minutes": 0.0,
+      "wrong": 4,
+      "wrong_rate": 0.1053
+     }
+    },
+    "projects": 19,
+    "regulated": false,
+    "tolerance": 0.01,
+    "why": "one agent alone was wrong on 2 of 38 pilot lines; at 95% confidence that could be 15%, above the 1% the customer accepts"
+   }
+  ],
+  "totals": {
+   "chosen": {
+    "lines": 338,
+    "llm_calls": 356,
+    "over_tolerance": 0,
+    "person_minutes": 50.0,
+    "wrong": 0
+   },
+   "maker_checker": {
+    "lines": 338,
+    "llm_calls": 356,
+    "person_minutes": 0.0,
+    "wrong": 0
+   },
+   "maker_checker_approval": {
+    "lines": 338,
+    "llm_calls": 356,
+    "person_minutes": 338.0,
+    "wrong": 0
+   },
+   "single": {
+    "lines": 338,
+    "llm_calls": 338,
+    "person_minutes": 0.0,
+    "wrong": 18
+   }
+  }
+ },
+ "target": 0.85,
+ "volume": {
+  "customers": 12,
+  "languages": [
+   "de",
+   "en"
+  ],
+  "questions": 720,
+  "regulated": 2,
+  "review_items": 28,
+  "rows": 12879,
+  "sheets": 211,
+  "with_legacy_template": 6
+ },
+ "world": "dev"
+}

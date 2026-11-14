@@ -1,0 +1,49 @@
+# The held-out world: other customers, a French-speaking third, status picklists in emoji and words the base
+# vocabulary has never seen, progress typed as "45 %", older templates with dates typed as text, archives named only by
+# year. Run once (scripts/evaluate.py --heldout).
+name = "heldout"
+seed = "heldout-packs-2026-q4"
+today = "2026-11-16"
+
+customers = 14
+projects = [6, 22]             # project sheets per customer
+tasks = [25, 110]              # rows per project sheet
+archive_sheets = [1, 4]        # finished projects kept in the workspace
+legacy_share = 0.4             # customers whose older projects use a previous template
+hierarchy_share = 0.6          # customers whose sheets group tasks under phase rows
+regulated_share = 0.35         # pharma, public sector, banking: every write needs an approval and an audit trail
+questions_per_customer = 60
+glossary_share = 0.5           # share of questions written in the customer's own words ("gate", "workstream")
+
+# conventions that exist in this world (the held-out world adds others)
+languages = ["en", "de", "fr"]
+status_vocabs = ["ryg", "track", "gar", "de_colours", "ok_watch", "custom_plan", "emoji", "fr_colours", "healthy"]
+progress_formats = ["fraction", "percent", "percent_text"]
+date_formats = ["iso", "dmy_text"]
+archive_styles = ["prefix", "suffix_old", "closed", "year"]
+
+# The LLM that reads raw sheets through a generic MCP connection.
+[llm]
+tokens_per_cell = 4
+tokens_per_sheet = 150
+context_tokens = 150000
+read_error_per_row = 0.0004    # chance that one row read into an aggregate is miscounted or misread
+translate_error = 0.02         # a question turned into the wrong query
+unknown_term_miss = 0.45       # a customer's own term ("gate", "slipping") misread when no glossary explains it
+known_title = 0.97             # a column title it has seen in many workspaces is mapped right this often
+unknown_title = 0.55           # a title it has not seen ("Ampel", "Termin") is guessed right this often
+known_vocab = 0.98
+unknown_vocab = 0.4
+progress_scale = 0.9           # reads 45 as 45% and 0.45 as 45% this often
+counts_summary_rows = 0.6      # treats phase rows as tasks (per workspace)
+includes_archive = 0.45        # per archive sheet whose name does not say "archive"
+includes_other = 0.25          # per sheet that is not a project plan (a RAID log, an intake form)
+latency_base_s = 0.9
+prefill_tokens_per_s = 25000
+out_tokens = 180
+
+# The status roll-up a customer asks agents to write each week, one line per project.
+[writes]
+weeks = 4
+slip = 0.03                    # an arithmetic or wording slip in a drafted status line
+approver_catch = 0.85          # a person approving a line catches a wrong one this often

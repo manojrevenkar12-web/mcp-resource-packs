@@ -1,0 +1,4 @@
+numpy==2.5.3
+hypothesis==6.170.14
+pytest==9.1.1
+ruff==0.16.8

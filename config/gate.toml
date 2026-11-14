@@ -1,0 +1,18 @@
+# The bar the dev report must clear before a change merges. Set before the held-out run; not moved after it.
+[kit]
+min_accuracy = 0.97
+min_customers_accepted_share = 1.0
+max_tokens_per_question = 1500
+
+[versus_raw_sheets]
+min_accuracy_gain = 0.4
+min_token_ratio = 20
+
+[inference]
+max_review_items_per_customer = 8
+
+[writes]
+max_wrong_lines_chosen = 0
+
+[kits]
+min_ready_share = 1.0
